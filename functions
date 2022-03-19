@@ -1,0 +1,89 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+res := add(12 , 4)
+res2 := sub(12 , 4)
+res3 := printNames("Dave " , " Brian")
+name1 , name2 := printNamesMulti("Luis " , " Mariam")
+fmt.Println(res)
+fmt.Println(res2)
+fmt.Println(res3)
+fmt.Println(name1  )
+fmt.Println(  name2 )
+}
+
+
+func add(num1 int , num2 int) int{
+var result = num1 + num2
+return result
+}
+
+func sub(num1 , num2 int) int{
+var result = num1 - num2
+return result
+}
+
+func printNames(name1 , name2 string) string{
+var result = name1 + name2
+return result
+}
+
+
+func printNamesMulti(name1 , name2 string)(string, string){
+return name1 , name2 
+}
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+var num1 int = 10
+var num2 int = 20
+	fmt.Println(num1, num2)
+//changeValue(num1 , num2  )
+//fmt.Println(num1, num2)
+changeByReference(&num1 , &num2)
+fmt.Println(num1, num2)
+printInfo()
+printMyInfo("Saad" , "Ali" )
+}
+
+
+func changeByValue(num1 , num2 int ) int{
+num1 = num2
+return num1
+}
+
+func changeByReference(num1 *int, num2 *int ){
+var num int
+num = *num1
+*num1 = *num2
+*num2 = num 
+}
+
+func printInfo(){
+fmt.Println("Dave Brian")
+}
+
+
+func printMyInfo(name1 , name2 string ){
+fmt.Println(name1 , name2)
+}

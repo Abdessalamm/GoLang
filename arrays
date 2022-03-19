@@ -1,0 +1,59 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+var my_array[6]int
+
+//var my_array_2 = [6]int{1,2,3,4,5,6}
+var my_array_d = [2][2]int{{1,1},{2,2}}
+
+var num int
+
+for num=0 ; num < 6 ; num++{
+my_array[num] = num + 1
+fmt.Println(my_array[num])
+}
+
+
+
+for x:=0 ; x < 2 ; x++{
+ for j:=0 ; j < 2 ; j++{
+fmt.Println(my_array_d[x][j])
+}
+}
+	
+}
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+var my_array = [6]int{1,2,3,4,5,6}
+
+var my_slice[]int = my_array[0:5]
+var my_slice_1[]int = my_array[1:5]
+
+my_slice_2 := my_array[3:5]
+
+	fmt.Println(my_slice)
+	fmt.Println(my_slice_1)
+	fmt.Println(my_slice_2)
+	fmt.Println(my_array)
+}

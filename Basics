@@ -1,0 +1,48 @@
+/* You can edit this code! dsasdasdas
+sdasdasdsadasdas
+sdasdasdasd
+asdasdasd
+asdasdasd
+ Click here and start typing.*/
+package main
+
+import "fmt"  
+
+func main() {
+
+var num1,num2,num3,num4 int
+var a,b,c byte
+var x1,x2,x3 float32;
+
+
+var number_1 int = 10
+var number_2 = 20
+
+number_3 := 30
+
+var number4 , name2 , salary2 = 2 , "Dave Louis" , 3000.2
+
+ var name string 
+name = "Louis Dave"
+var age uint32
+var salary float64
+var is_active bool
+var balance float64
+var sum = salary + balance
+
+//printing my name
+        fmt.Printf("%v  %q %v", number4 , name2 , salary2) 
+	fmt.Println( ) 
+        fmt.Printf("%T  %v %v", number_1, number_2 , number_3) 
+	fmt.Println( ) 
+        fmt.Printf("%T %T %T %T", num1,num2,num3,num4) 
+	fmt.Println( ) 
+	 fmt.Printf("%T %T %T", a,b,c) 
+	fmt.Println( ) 
+	 fmt.Printf("%T %T %T", x1,x2,x3) 
+	fmt.Println( ) 
+	fmt.Printf("%T %T %T %T", name, is_active, sum, age) 
+	fmt.Println( ) 
+	fmt.Printf("%q %v %v %v", name, is_active, sum, age) 
+	fmt.Println( name ) 
+}

@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+	"reflect"
+	"strings"
+)
+
+func main() {
+
+var my_array = []string{"Khalid","Ibrahim","Hamid"}
+
+var name = "Khalid"
+	fmt.Println(reflect.TypeOf(name))
+	fmt.Println(len(name))
+	fmt.Println(strings.ToUpper(name))
+	fmt.Println(strings.ToLower(name))
+	fmt.Println(strings.HasPrefix(name,"Kh" ))
+	fmt.Println(strings.HasSuffix(name,"id" ))
+	fmt.Println(strings.Join(my_array,"-" ))
+	fmt.Println(strings.Repeat(name , 3 ))
+	fmt.Println(strings.Contains(name , "ha" ))
+	fmt.Println(strings.Index(name , "ha" ))
+	fmt.Println(strings.Count(name , "d" ))
+	fmt.Println(strings.Replace(name , "d" , "c",2 ))
+	fmt.Println(strings.Compare( "Khalid" , "khalid"  ))
+	fmt.Println(strings.Compare( "khalid" , "KHALID"  ))
+	fmt.Println(strings.Compare( "Khalid" , "khaliD"  ))
+	fmt.Println(  "       Khalid.     "    )
+	fmt.Println(strings.TrimSpace("       Khalid.     "  ))
+	fmt.Println(strings.ContainsAny( "Khalid" , "a"  ))
+	fmt.Println(strings.ContainsAny( "Khalid" , "i"  ))
+}

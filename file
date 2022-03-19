@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"os"
+)
+
+func main(){
+	file,err := os.Create("file.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	file.WriteString("Hello There\nHow Are you doing?")
+	file.Close()
+	mydata,err := ioutil.ReadFile("file.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	readingData := string(mydata)
+	fmt.Println(readingData)
+}

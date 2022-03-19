@@ -1,0 +1,41 @@
+package main
+
+import (
+	"fmt"
+)
+
+type geek interface{
+coding()
+}
+
+func printInfo(g geek){
+fmt.Println(g )
+}
+
+type nerd struct {
+name string
+dept string
+}
+
+func (n nerd) sleeping(){
+fmt.Println( "Nerd Is Coding" )
+}
+
+type jrgeek struct {
+name string
+dept string
+}
+
+func (j jrgeek) sleeping(){
+fmt.Println( "Jr Geek is Learning" )
+}
+
+func main() {
+
+var n = nerd{name:"Katy", dept:"IT"}
+var j = jrgeek{name:"Dogi", dept:"CyberSecurity"}
+	 n. coding()
+	j. coding()
+	printInfo(n)
+	printInfo(j)
+}

@@ -1,0 +1,203 @@
+package main
+
+import (
+	"fmt"
+	 "time"
+)
+
+
+func printInfo(str string){
+for x:=0; x <4 ; x++{
+time.Sleep(1000 * time.Millisecond)
+fmt.Println(str)
+}
+}
+
+
+func main() {
+	go printInfo("Someone")
+	printInfo("Dave")
+}
+
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+	 "time"
+)
+
+
+func printSomeone(str string){
+for x:=0; x <4 ; x++{
+time.Sleep(1000 * time.Millisecond)
+fmt.Println(str)
+}
+}
+
+func printDave(str string){
+for x:=0; x <4 ; x++{
+time.Sleep(1000 * time.Millisecond)
+fmt.Println(str)
+}
+}
+
+
+func main() {
+	go  printSomeone("Someone")
+	go  printDave("Dave")
+	time.Sleep(3000 * time.Millisecond)
+	fmt.Println("THe End")
+}
+
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+var i = 0
+
+
+
+func add(wg *sync.WaitGroup) {
+        i = i +1
+	wg.Done()
+}
+
+func main() {
+
+var p sync.WaitGroup
+for x:=0; x <1000 ; x++{
+p.Add(1)
+go add(  &p)
+}
+p.Wait()
+	fmt.Println(i )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+var i = 0
+
+
+
+func add(wg *sync.WaitGroup,m *sync.Mutex) {
+        m.Lock()
+        i = i +1
+        m.Unlock()
+	wg.Done()
+}
+
+func main() {
+
+var p sync.WaitGroup
+var m  sync.Mutex
+for x:=0; x <1000 ; x++{
+p.Add(1)
+go add(  &p , &m)
+}
+p.Wait()
+	fmt.Println(i )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt" 
+)
+
+
+func printInfo(str chan string){
+
+fmt.Println("Hello from printInfo channel")
+str <- "Someone"
+}
+
+
+func main() {
+
+str2 := make(chan string)
+	go printInfo(str2)
+	<- str2
+	fmt.Println("The End")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt" 
+)
+
+ 
+func main() {
+
+str2 := make(chan string,2)
+	 
+	str2 <- "Someone"
+	str2 <- "Dave"
+	
+	fmt.Println(<- str2)
+	fmt.Println(<- str2)
+}

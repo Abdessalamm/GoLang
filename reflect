@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"reflect"
+)
+
+func main() {
+
+num := 33
+num2:=true
+num3:=3.14
+num4:="Khalid"
+	fmt.Println(reflect.TypeOf(num))
+	fmt.Println(reflect.TypeOf(num2))
+	fmt.Println(reflect.TypeOf(num3))
+	fmt.Println(reflect.TypeOf(num4)) 
+}

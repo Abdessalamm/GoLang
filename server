@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
+func main(){
+	http.HandleFunc("/" ,MyRoute1)
+	http.HandleFunc("/about" ,MyRoute2)
+	http.ListenAndServe(":8080",nil)
+}
+
+func MyRoute1(writer http.ResponseWriter, request *http.Request) {
+	fmt.Fprintf(writer,"Hi Welcome to Home")
+}
+
+func MyRoute2(writer http.ResponseWriter, request *http.Request) {
+	fmt.Fprintf(writer,"Hi Welcome Back !")
+}

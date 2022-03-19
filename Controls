@@ -1,0 +1,252 @@
+package main
+
+import (
+	"fmt" 
+)
+
+func main() {
+
+var num1 int = 10
+var num2 int = 20
+
+if(num1 == num2){
+fmt.Println("Equal")
+}else if(num1 >= num2){
+fmt.Println("num1 smaller than num2")
+}else{
+fmt.Println("Not Equal")
+}
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+var num2 int = 120
+
+switch num2{
+
+case 1:
+fmt.Println("num2 = 1")
+case 2:
+fmt.Println("num2 = 2")
+case 3:
+fmt.Println("num2 = 3")
+case 4:
+fmt.Println("num2 = 4")
+case 20:
+fmt.Println("num2 = 20") 
+default:
+fmt.Println("num2 not equal any above cases")
+
+}
+	
+}
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+for a:=10;a<20;a++{
+fmt.Println("Hello, ", a)
+}
+
+var num1 = 20
+for num1 < 100 {
+num1 += num1
+fmt.Println("while, ",  num1)
+}
+	
+}
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+var my_numbers = []int{1,2,3,4,5,6}
+var num1 = 0
+
+for _,num := range my_numbers{
+num1 += num
+}
+fmt.Println("values: ", num1)
+
+
+var my_numbers2 = map[string]string{"name":"Dave","age":"37","salary":"3000.0","department":"Go developer"}
+
+for key,value:= range my_numbers2{
+fmt.Println("key: ", key ," value: ", value) 
+}
+	
+}
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+var num1 = 18
+Loop:
+ fmt.Println("Sorry, +18")
+
+if(num1 <= 17){
+goto Loop
+}else{
+fmt.Println("Yes , approved")
+}
+}
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+var num1 = 1
+ for num1 < 10 {
+fmt.Println(   num1)
+num1 ++
+
+if(num1 == 4 ){
+break
+}
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+const num2 = 1
+var num1 = 1
+ for num1 < 10 {
+
+if(num1 == 6 ){
+num1 ++
+continue
+}
+fmt.Println(   num1)
+num1 ++
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+
+ 
+var num1 int = 1
+var num2 float64 = 1.5
+var name string = "12"
+var name2 string = "2.3"
+
+var myfloatnum = float64(num1)
+var myIntnumber = int(num2)
+
+var mynamefloatnum,_ = strconv.ParseFloat(name2,64)
+var myname2Intnumber,_ = strconv.ParseInt(name,0, 64)
+
+fmt.Println(   mynamefloatnum)
+fmt.Println(   myname2Intnumber)
+fmt.Println(   myfloatnum)
+fmt.Println(   myIntnumber)
+  
+}
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+package main
+
+import (
+	"fmt"
+	"errors"
+)
+
+func totalResult(x,y int) (int, error){
+if(y == 0){
+return 0 , errors.New("Cant divide by Zero Dave")
+}
+ return x/y , nil
+}
+
+func main() {
+
+result , er := totalResult(4,0)
+
+if(er != nil){
+fmt.Println(er)
+}else{
+fmt.Println(result)
+}
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func totalResult(x,y int) int{
+ defer func(){
+fmt.Println(recover())
+}()
+ return x/y  
+}
+
+func main() {
+	fmt.Println(totalResult(3,0))
+	fmt.Println(totalResult(6,3))
+	fmt.Println(totalResult(6,2))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func show1() {
+	fmt.Println("show1")
+}
+func show2() {
+	fmt.Println("show2")
+}
+func show3(s string) {
+	fmt.Println(s)
+}
+
+func main() {
+	defer show1()
+	 show2()
+	 show3("Dave")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+package main
+
+import (
+	 
+	"os"
+)
+
+func main() {
+
+panic("This error by Dave")
+
+_,err := os.Open("/temp/file")
+
+if err != nil {
+panic(err)
+}
+	
+}

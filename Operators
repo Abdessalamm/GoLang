@@ -1,0 +1,141 @@
+//Arithmatic Operator
+package main
+
+import ("fmt")
+
+func main() {
+
+var num1 int = 1
+var num2 int = 2
+
+var total int = num1 + num2
+	fmt.Printf("Sum %d", total)
+	
+	fmt.Println()
+	
+var sub int = num1 - num2
+	fmt.Printf("Sub %d", sub)
+
+	fmt.Println()
+	
+var multi int = num1 * num2
+	fmt.Printf("multi %d", multi)
+	
+
+	fmt.Println()
+	
+var divide int = num1 / num2
+	fmt.Printf("divide %d", divide)
+
+	fmt.Println()
+	
+var divide2 int = num1 % num2
+	fmt.Printf("divide2 %d", divide2)
+	
+	fmt.Println()
+	
+num2++
+	fmt.Printf("num2++ %d", num2)
+	fmt.Println()
+num2-- 
+	fmt.Printf("num2-- %d", num2)
+}
+
+
+
+//Relational Operator
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+var num1 int = 1
+var num2 int = 2
+
+if(num1 == num2){
+fmt.Println("Yes")
+}else{
+fmt.Println("No")
+}
+
+if(num1 < num2){
+fmt.Println("Yes")
+}else{
+fmt.Println("No")
+}
+
+
+
+//Logical Operator
+
+package main
+
+import ("fmt")
+
+func main() {
+
+var check1 bool = true
+var check2 bool = false
+
+if(check1 && check2){
+fmt.Println("Yes")
+}else{
+fmt.Println("No")
+}
+
+if(check1 || check2){
+fmt.Println("Yes")
+}else{
+fmt.Println("No")
+}
+
+if( !(check1 && check2) ){
+fmt.Println("Yes")
+}else{
+fmt.Println("No")
+}
+	 
+}
+
+
+// Assignment Operator
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+var num1 int = 11
+var num2 int
+
+num2 = num1
+fmt.Println(num2)
+fmt.Println()
+num2 += num1
+fmt.Println(num2)
+fmt.Println()
+num2 -= num1
+fmt.Println(num2)
+fmt.Println()
+num2 *= num1
+fmt.Println(num2)
+fmt.Println()
+num2 /= num1
+fmt.Println(num2) 
+	
+}
+
+
+
+
+
+
+
+
+
