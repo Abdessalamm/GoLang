@@ -1,0 +1,22 @@
+package main
+
+import (
+	. "fmt"
+	. "strconv"
+	. "strings"
+)
+
+func main() {
+	a := 9
+	b := "Fati "
+	c := " Louis"
+	d := b + Itoa(a) + c
+	var e int = 9
+	Println(d)
+	Println()
+	Printf(d)
+	Println()
+	Println(ToUpper(d))
+	Println()
+	Println(Itoa(e))
+}
