@@ -1,0 +1,53 @@
+<style>
+    input[type=text], select{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type=submit]{
+        width:100%;
+        background-color: black;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0px;
+        border:none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type=submit]:hover{
+        background-color: aqua;
+    }
+    div{
+        background-color: powderblue;
+        border-radius: 5px;
+        padding: 20px;
+    }
+    .hello {
+        color: Red;
+        text-align: center;
+    }
+
+</style>
+
+<div>
+    <h1 class="hello">Choose Settings</h1>
+    <form method="post">
+        <label>Scroll Amount</label>
+        <input type="text" name="sm" placeholder="Value should be a number" required><br>
+        <label>Scroll Delay</label>
+        <input type="text" placeholder="Value should be a number" name="sd"><br>
+        <label>BgColor</label>
+        <input type="text" placeholder="Value should be a text" name="bc"><br>
+        <label>Direction</label>
+        <input type="text" placeholder="Right, Left, Up, Down" name="direction" required><br>
+        <label>Loop</label>
+        <input type="text" placeholder="Value should be a number" name="loop"><br>
+<input type="submit" name="submit" value="Change Settings">
+    </form>
+
+
+</div>
